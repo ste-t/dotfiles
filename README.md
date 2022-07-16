@@ -16,10 +16,6 @@ Minor programs:
     -   There are no config files for it here, but [check this out](https://github.com/IlmastroStefanuzzo/tty-ly-colors).
 -   [Nerdfetch](https://github.com/ThatOneCalculator/NerdFetch#readme) (Fetch program)
 
-# Rofi and Kitty
-
-Make sure you read [this](.config/rofi) and [this](.config/kitty) for Rofi's and Kitty's themes.
-
 # Installation
 
 > If you want to straight up copy all the dotfiles (**<u>never recommended</u>**).
@@ -44,5 +40,4 @@ Make sure you read [this](.config/rofi) and [this](.config/kitty) for Rofi's and
     ```sh
     mv ~/.bashrc ~/.bashrc.bak
     ```
--   You read ["Rofi and Kitty"](#Rofi-and-Kitty), right?
 -   Done!
