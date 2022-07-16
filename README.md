@@ -14,6 +14,7 @@ Minor programs:
 -   [Feh](https://github.com/derf/feh#readme) (Wallpaper setter)
 -   [Ly](https://github.com/fairyglade/ly#readme) (TUI Display manager)
     -   There are no config files for it here, but [check this out](https://github.com/IlmastroStefanuzzo/tty-ly-colors).
+-   [Discocss](https://github.com/mlvzk/discocss#readme) (Inject custom CSS into Discord)
 -   [LSD](https://github.com/Peltoche/lsd#readme) (Prettier ls)
 -   [Nerdfetch](https://github.com/ThatOneCalculator/NerdFetch#readme) (Fetch program)
 
