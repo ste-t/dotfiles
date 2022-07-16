@@ -18,7 +18,7 @@ Minor programs:
 
 # Rofi and Kitty
 
-Make sure you read [this](.conf/rofi/README.md) and [this](.conf/kitty/README.md) for Rofi's and Kitty's themes.
+Make sure you read [this](.config/rofi/README.md) and [this](.config/kitty/README.md) for Rofi's and Kitty's themes.
 
 # Installation
 
