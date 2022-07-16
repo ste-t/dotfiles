@@ -14,7 +14,10 @@ Minor programs:
 -   [Feh](https://github.com/derf/feh#readme) (Wallpaper setter)
 -   [Ly](https://github.com/fairyglade/ly#readme) (TUI Display manager)
     -   There are no config files for it here, but [check this out](https://github.com/IlmastroStefanuzzo/tty-ly-colors).
+-   [LSD](https://github.com/Peltoche/lsd#readme) (Prettier ls)
 -   [Nerdfetch](https://github.com/ThatOneCalculator/NerdFetch#readme) (Fetch program)
+
+Make sure you install [Fira Code Nerd Fonts](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode#readme). On Arch you can use the AUR: `yay -S nerd-fonts-fira-code`.
 
 # Installation
 
