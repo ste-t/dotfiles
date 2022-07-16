@@ -1,5 +1,12 @@
 # My dotfiles
 
+<p align="middle"><img alt="Screenshot with terminals and Polybar" src="screenshots/1.png" width="97%" /></p>
+<p align="middle">
+    <img alt="Screenshot with Dunst and Rofi" src="screenshots/2.png" width="48%" />
+    &nbsp;
+    <img alt="Custom Discord theme screenshot" src="screenshots/discord.png" width="48%"/>
+</p>
+
 Main programs used:
 
 -   [AwesomeWM](https://awesomewm.org) (Window Manager)
