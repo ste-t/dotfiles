@@ -47,7 +47,7 @@ Make sure you install [Fira Code Nerd Fonts](https://github.com/ryanoasis/nerd-f
     stow .
     ```
     -   To better understand what's happening, [check this video out](https://youtu.be/CxAT1u8G7is).
--   If you get any errors saying the files already exist, remove them or, even better, rename them to have a backup.
+-   If you get any errors saying files already exist, remove them or, even better, rename them to have a backup.
     ```sh
     mv ~/.bashrc ~/.bashrc.bak
     ```
