@@ -1,0 +1,9 @@
+.theme-dark {
+  --background-primary: #292d3e;
+  --deprecated-store-bg: #292d3e;
+  --background-mobile-primary: #292d3e;
+  --channeltextarea-background: #2d3143;
+  --background-secondary: #282c3d;
+  --background-secondary-alt: #232735;
+  --background-tertiary: #212432;
+}

@@ -1,0 +1,64 @@
+/*
+	This is a modified version of the original by DT
+
+	- I changed the position to bottom and made it so the bar doesn't take the whole screen width
+	- I applyed a palenight theme to it
+*/
+
+* {
+    background-color:           #292d3e;
+    border-color:               #292d3e;
+    text-color:                 #bbc2cf;
+    height:                     20px;
+    font:                       "Fira Code Semibold 9";
+    prompt-font:                "Fira Code Bold 9";
+    prompt-background:          #82aaff;
+    prompt-foreground:          #292d3e;
+    prompt-padding:             2px;
+    selected-normal-background: #ff5572;
+    selected-normal-foreground: #292d3e;
+}
+#window {
+    anchor: south;
+    location: south;
+    width: 50%;
+    padding: 0px;
+    children: [ horibox ];
+}
+#horibox {
+    orientation: horizontal;
+    children: [ prompt, entry, listview ];
+}
+#prompt {
+    padding:          @prompt-padding;
+    background-color: @prompt-background;
+    text-color:       @prompt-foreground;
+    font:             @prompt-font;
+}
+#listview {
+    layout: horizontal;
+    lines: 100;
+}
+#entry {
+    padding: 2px;
+    expand: false;
+    width: 10em;
+}
+#element {
+    padding: 2px 8px;
+}
+#element selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+element-icon {
+	size: 2ch;
+	background-color: inherit;
+}
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+

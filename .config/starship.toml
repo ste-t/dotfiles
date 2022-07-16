@@ -1,0 +1,21 @@
+format = """$all$line_break$directory$character$custom"""
+
+[character]
+#success_symbol = "[ৎ](bold green)"
+#success_symbol = "[➜](bold green)"
+success_symbol = "[⊃](bold green)"
+error_symbol = "[⊅](bold red)"
+#error_symbol = "[⨘](bold red)"
+#error_symbol = "[ö](bold red)"
+#error_symbol = "[✗](bold red) "
+
+[cmd_duration]
+disabled = true
+
+[directory]
+read_only_style = "bold dimmed red"
+read_only = "鈐"
+#read_only = "鎖"
+
+[battery]
+disabled = true
