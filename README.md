@@ -7,6 +7,20 @@
     <img alt="Custom Discord theme screenshot" src="screenshots/discord.png" width="48%"/>
 </p>
 
+## Features
+
+Distinctive features:
+
+-   Hide/Show status bar with Super + Space
+
+Generic features:
+
+-   Palenight theme
+    -   Custom Discord CSS
+-   Handy aliases
+
+## Programs
+
 Main programs used:
 
 -   [AwesomeWM](https://awesomewm.org) (Window Manager)
@@ -26,6 +40,11 @@ Minor programs:
 -   [Nerdfetch](https://github.com/ThatOneCalculator/NerdFetch#readme) (Fetch program)
 
 Make sure you install [Fira Code Nerd Fonts](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode#readme). On Arch you can use the AUR: `yay -S nerd-fonts-fira-code`.
+
+## Note
+
+All the configuration files which are in use and have DistroTube's logo in them are modified versions of the originals, but are not copies.  
+Give a look at [DT's dotfiles](https://gitlab.com/dwt1/dotfiles).
 
 # Installation
 

@@ -2,7 +2,7 @@ alias ls='lsd --group-dirs first'
 alias la="ls -A"
 alias ll="ls -lA"
 
-alias bat="bat --map-syntax '*.Rmd:Markdown' --theme ansi"
+alias bat="bat --map-syntax '*.Rmd:Markdown' --theme  OneHalfDark"
 alias v="vim"
 
 alias stow="stow -v"

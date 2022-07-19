@@ -1,8 +1,5 @@
 /*
 	This is a modified version of the original by DT
-
-	- I changed the position to bottom and made it so the bar doesn't take the whole screen width
-	- I applyed a palenight theme to it
 */
 
 * {
