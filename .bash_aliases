@@ -5,7 +5,7 @@ alias ll="ls -lA"
 alias bat="bat --map-syntax '*.Rmd:Markdown' --theme  OneHalfDark"
 alias v="vim"
 
-alias stow="stow -v"
+alias stow="stow -v2"
 
 #alias clear="clear && nerdfetch"
 
