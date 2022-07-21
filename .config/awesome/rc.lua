@@ -520,7 +520,7 @@ beautiful.border_normal = "#2e3250"
 beautiful.useless_gap = 5
 
 -- Autorun
-awful.spawn.with_shell("/home/stefano/.config/polybar/launch.sh", false)
+awful.spawn.with_shell(os.getenv("HOME") .. "/.config/polybar/launch.sh", false)
 awful.util.spawn('setxkbmap -layout "it,us" -option "grp:alt_shift_toggle"', false)
 -- awful.util.spawn("picom", false)
-awful.util.spawn("/home/stefano/.scripts/.fehbg", false)
+awful.util.spawn(os.getenv("HOME") .. "/.scripts/.fehbg", false)
