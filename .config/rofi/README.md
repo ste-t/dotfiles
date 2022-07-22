@@ -1,6 +1,6 @@
 # Themes
 
-Put themes into the `themes` directory. To select the used theme, symlink the file in that directory into `current-theme.rasi`. [Just like Kitty](.config/kitty).
+Put themes into the `themes` directory. To select the used theme, symlink the file in that directory into `current-theme.rasi`. [Just like Kitty](/.config/kitty).
 
 ## Palenight
 

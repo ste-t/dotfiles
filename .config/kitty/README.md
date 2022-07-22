@@ -1,6 +1,6 @@
 # Themes
 
-Put themes into the `themes` directory. To select the used theme, symlink the file in that directory into `current-theme.rofi`. [Just like Rofi](.config/rofi).
+Put themes into the `themes` directory. To select the used theme, symlink the file in that directory into `current-theme.rofi`. [Just like Rofi](/.config/rofi).
 
 ## Palenight
 
