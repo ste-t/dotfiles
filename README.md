@@ -31,7 +31,6 @@ Main programs used:
 
 Minor programs:
 
--   [LXAppearance](https://github.com/lxde/lxappearance) (set icon and GTK themes)
 -   [Dunst](https://github.com/dunst-project/dunst#readme) (Notification daemon)
 -   [Feh](https://github.com/derf/feh#readme) (Wallpaper setter)
 -   [Ly](https://github.com/fairyglade/ly#readme) (TUI Display manager)
@@ -42,10 +41,15 @@ Minor programs:
 
 GTK, Qt, Icons
 
+-   [LXAppearance](https://github.com/lxde/lxappearance) (Set GTK theme)
+
+-   [Qt5ct](https://qt5ct.sourceforge.io) (Set Qt theme)
+
+-   [qt5-styleplugins](https://github.com/qt/qtstyleplugins) (Uniform look between GTK and Qt)
+
 -   Palenight theme from the [GTK Theme Framework](https://github.com/jaxwilko/gtk-theme-framework#gtk-theme-framework)
     -   [palenight-gtk-theme](https://aur.archlinux.org/packages/palenight-gtk-theme) in the AUR
 -   [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme#readme) icons
--   I should find a Qt theme
 
 Make sure you install [Fira Code Nerd Fonts](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode#readme). On Arch you can use the AUR: `yay -S nerd-fonts-fira-code`.
 
