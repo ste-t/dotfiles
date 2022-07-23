@@ -5,8 +5,8 @@
     <img alt="Screenshot with Dunst and Rofi" src="screenshots/2.png" width="48%" />
     &nbsp;
     <img alt="Custom Discord theme screenshot" src="screenshots/discord.png" width="48%"/>
-    <img alt="Custom Discord theme screenshot" src="screenshots/vivaldi.png" width="48%"/>
-    <a href="https://www.stefano.ml"><img alt="Dunst low/normal/urgent urgency screenshot" src="screenshots/vivaldi1.png" width="48%"/></a>
+    <a href="https://www.stefano.ml"><img alt="My website on the Vivaldi browser" src="screenshots/vivaldi.png" width="48%"/></a>
+    <img alt="Vivaldi browser startpage" src="screenshots/vivaldi1.png" width="48%"/>
     <img alt="Dunst low/normal/urgent urgency screenshot" src="screenshots/dunst.png" width="48%"/>
 </p>
 
