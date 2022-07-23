@@ -5,6 +5,7 @@
     <img alt="Screenshot with Dunst and Rofi" src="screenshots/2.png" width="48%" />
     &nbsp;
     <img alt="Custom Discord theme screenshot" src="screenshots/discord.png" width="48%"/>
+    <img alt="Dunst low/normal/urgent urgency screenshot" src="screenshots/dunst.png" width="45%"/>
 </p>
 
 ## Features
