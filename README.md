@@ -5,7 +5,9 @@
     <img alt="Screenshot with Dunst and Rofi" src="screenshots/2.png" width="48%" />
     &nbsp;
     <img alt="Custom Discord theme screenshot" src="screenshots/discord.png" width="48%"/>
-    <img alt="Dunst low/normal/urgent urgency screenshot" src="screenshots/dunst.png" width="45%"/>
+    <img alt="Custom Discord theme screenshot" src="screenshots/vivaldi.png" width="48%"/>
+    <a href="https://www.stefano.ml"><img alt="Dunst low/normal/urgent urgency screenshot" src="screenshots/vivaldi1.png" width="48%"/></a>
+    <img alt="Dunst low/normal/urgent urgency screenshot" src="screenshots/dunst.png" width="48%"/>
 </p>
 
 ## Features
@@ -18,6 +20,8 @@ Generic features:
 
 -   Palenight theme
     -   Custom Discord CSS
+-   [Vivaldi themes](vivaldi-themes)
+    -   In the first screenshot [my website](https://www.stefano.ml) is shown!
 -   Handy aliases
 
 ## Programs
@@ -43,11 +47,8 @@ Minor programs:
 GTK, Qt, Icons
 
 -   [LXAppearance](https://github.com/lxde/lxappearance) (Set GTK theme)
-
 -   [Qt5ct](https://qt5ct.sourceforge.io) (Set Qt theme)
-
 -   [qt5-styleplugins](https://github.com/qt/qtstyleplugins) (Uniform look between GTK and Qt)
-
 -   Palenight theme from the [GTK Theme Framework](https://github.com/jaxwilko/gtk-theme-framework#gtk-theme-framework)
     -   [palenight-gtk-theme](https://aur.archlinux.org/packages/palenight-gtk-theme) in the AUR
 -   [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme#readme) icons

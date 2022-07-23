@@ -4,3 +4,5 @@
 /README.md  # Ignore the README.md in the root directory, but keep others (e.g.: .config/kitty/README.md)
 ^/LICENSE.*
 ^/COPYING
+
+/vivaldi-themes
