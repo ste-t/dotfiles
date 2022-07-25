@@ -119,6 +119,9 @@ local function set_wallpaper(s)
         end
         gears.wallpaper.maximized(wallpaper, s, true)
     end
+
+    -- Always set the weallpaper using the feh script if possible
+    awful.util.spawn(os.getenv("HOME") .. "/.scripts/.fehbg", false)
 end
 
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
@@ -520,7 +523,6 @@ beautiful.border_normal = "#2e3250"
 beautiful.useless_gap = 5
 
 -- Autorun
-awful.spawn.with_shell(os.getenv("HOME") .. "/.config/polybar/launch.sh", false)
+awful.util.spawn(os.getenv("HOME") .. "/.config/polybar/launch.sh", false)
 awful.util.spawn('setxkbmap -layout "it,us" -option "grp:alt_shift_toggle"', false)
 -- awful.util.spawn("picom", false)
-awful.util.spawn(os.getenv("HOME") .. "/.scripts/.fehbg", false)
