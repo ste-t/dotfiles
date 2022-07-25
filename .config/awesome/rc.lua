@@ -43,11 +43,6 @@ do
 end
 -- }}}
 
--- {{{ Hide/show polybar
--- function polybar_hide() awful.util.spawn("polybar-msg cmd hide") screen[1].padding = { bottom =  0, }  end
--- function polybar_show() awful.util.spawn("polybar-msg cmd show") screen[1].padding = { bottom = 20, } end
--- }}}
-
 -- {{{ Variable definitions
 is_bar_visible = true
 -- Themes define colours, icons, font and wallpapers.
@@ -434,6 +429,14 @@ awful.rules.rules = {
     -- Set Firefox to always map on the tag named "2" on screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { screen = 1, tag = "2" } },
+
+    -- Automatically open programs in workspaces
+    { rule = { class = "discord" },
+      properties = { tag = "9" } },
+    { rule = { class = "Element" },
+      properties = { tag = "8" } },
+    { rule = { class = "Vivaldi-stable" },
+      properties = { tag = "1" } },
 }
 -- }}}
 
