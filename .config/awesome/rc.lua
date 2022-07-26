@@ -45,6 +45,34 @@ end
 
 -- {{{ Variable definitions
 is_bar_visible = true
+function toggle_bar_visible(fullscreen)
+    if fullscreen then
+        -- screen[1].padding = { bottom = 0, }
+        awful.util.spawn("polybar-msg cmd hide", false)
+        return
+    -- No, I can't just do else because that will consider nil as false
+    elseif fullscreen == false then
+        if is_bar_visible then
+            screen[1].padding = { bottom = 20, }
+            awful.util.spawn("polybar-msg cmd show", false)
+        else
+            screen[1].padding = { bottom = 0, }
+            awful.util.spawn("polybar-msg cmd hide", false)
+        end
+        return
+    end
+
+    if is_bar_visible then
+        is_bar_visible = false
+        screen[1].padding = { bottom = 0, }
+        awful.util.spawn("polybar-msg cmd hide", false)
+    else
+        is_bar_visible = true
+        screen[1].padding = { bottom = 20, }
+        awful.util.spawn("polybar-msg cmd show", false)
+    end
+end
+
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
@@ -81,9 +109,9 @@ awful.layout.layouts = {
 }
 -- }}}
 
- -- With a padding, the tiled clients wont use 20px at the top and bottom
- -- and 40px on the left and right.
- screen[1].padding = { bottom = 20, }
+-- With a padding, the tiled clients wont use 20px at the top and bottom
+-- and 40px on the left and right.
+screen[1].padding = { bottom = 20, }
 
 -- {{{ Menu
 -- Create a launcher widget and a main menu
@@ -188,7 +216,7 @@ globalkeys = gears.table.join(
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal, false) end,
-              {description = "open a terminal", group = "launcher"}),
+              {description = "open " .. terminal .. " terminal", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
@@ -224,14 +252,17 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Prompt
-    awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
-              {description = "run prompt", group = "launcher"}),
+    -- awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
+    --           {description = "run prompt", group = "launcher"}),
 
 
     -- Media Keys
-    awful.key({ }, "XF86AudioMute", function () awful.util.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle", false) end),
-    awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ +10%", false) end),
-    awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ -10%", false) end),
+    awful.key({ }, "XF86AudioMute", function () awful.util.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle", false) end,
+    {description = "mute audio", group = "media keys"}),
+    awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ +10%", false) end,
+    {description = "raise volume", group = "media keys"}),
+    awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ -10%", false) end,
+    {description = "lower volume", group = "media keys"}),
 
     --awful.key({ }, "XF86AudioLowerVolume", function() awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%") end),
     --awful.key({ }, "XF86AudioRaiseVolume", function() awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%") end),
@@ -242,27 +273,18 @@ globalkeys = gears.table.join(
               {description = "launch Rofi", group = "launcher"}),
 
     -- Take screenshot
-    awful.key({ }, "Print", function() awful.util.spawn("flameshot gui", false) end),
+    awful.key({ }, "Print", function() awful.util.spawn("flameshot gui", false) end,
+    {description = "take screenshot", group = "media keys"})
 
-    -- Toggle polybar
-    -- awful.key({ modkey }, "space", function()
-    -- 		screen[1].padding = { bottom = screen[1].padding["bottom"] == 0 and 20 or 0, }
-    -- 		awful.util.spawn("polybar-msg cmd " .. (screen[1].padding["bottom"] == 0  and "hide" or "show"))
-    -- end)
-    awful.key({ modkey }, "space", function()
-        if screen[1].padding["bottom"] == 0 then
-            is_bar_visible = true
-            screen[1].padding = { bottom = 20, }
-            awful.util.spawn("polybar-msg cmd show", false)
-        else
-            is_bar_visible = false
-            screen[1].padding = { bottom = 0, }
-            awful.util.spawn("polybar-msg cmd hide", false)
-        end
-    end)
 )
 
 clientkeys = gears.table.join(
+    -- Toggle polybar
+    awful.key({ modkey }, "space", function (c)
+        toggle_bar_visible()
+    end,
+    {description = "toggle polybar", group = "polybar"}),
+
     awful.key({ modkey,           }, "f",
         function (c)
             c.fullscreen = not c.fullscreen
@@ -323,12 +345,12 @@ for i = 1, 9 do
                   {description = "view tag #"..i, group = "tag"}),
         -- Toggle tag display.
         awful.key({ modkey, "Control" }, "#" .. i + 9,
-                  function ()
-                      local screen = awful.screen.focused()
-                      local tag = screen.tags[i]
-                      if tag then
-                         awful.tag.viewtoggle(tag)
-                      end
+                  function()
+                    local screen = awful.screen.focused()
+                    local tag = screen.tags[i]
+                    if tag then
+                        awful.tag.viewtoggle(tag)
+                    end
                   end,
                   {description = "toggle tag #" .. i, group = "tag"}),
         -- Move client to tag.
@@ -422,9 +444,9 @@ awful.rules.rules = {
       }, properties = { floating = true }},
 
     -- Add titlebars to normal clients and dialogs
-    { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = false }
-    },
+    -- { rule_any = {type = { "normal", "dialog" }
+    --   }, properties = { titlebars_enabled = false }
+    -- },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
     -- { rule = { class = "Firefox" },
@@ -504,16 +526,19 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
--- Hide polybar on fullscreen
+-- {{{ Hide polybar on fullscreen
 client.connect_signal("request::geometry", function(c)
-	-- awful.util.spawn("polybar-msg cmd " .. (c.fullscreen and "hide" or is_bar_hidden or "show"))
-	-- screen[1].padding = { bottom = c.fullscreen and 0 or is_bar_hidden or 20, }
-	if c.fullscreen then
-		awful.util.spawn("polybar-msg cmd hide", false)
-	elseif is_bar_visible then
-		awful.util.spawn("polybar-msg cmd show", false)
-	end
+    -- if c.fullscreen then
+    --     toggle_bar_visible(true)
+    -- end
+    toggle_bar_visible(c.fullscreen)
 end)
+
+client.connect_signal("focus", function(c)
+    toggle_bar_visible(c.fullscreen)
+end)
+-- }}}
+
 
 -- Colors
 -- beautiful.border_focus = "#7e57c2"

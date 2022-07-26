@@ -1,3 +1,4 @@
+// vim:ft=css
 /*
 	This is a modified version of the original by DT
 */
@@ -18,7 +19,7 @@
 #window {
     anchor: south;
     location: south;
-    width: 50%;
+    width: 48%;
     padding: 0px;
     children: [ horibox ];
 }
