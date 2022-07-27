@@ -58,12 +58,12 @@ GTK, Qt, Icons
 
 Make sure you install [Fira Code Nerd Fonts](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode#readme). On Arch you can use the AUR: `yay -S nerd-fonts-fira-code`.
 
-## Note
+## Wallpapers
 
-All the configuration files which are in use and have DistroTube's logo in them are modified versions of the originals, but are not copies.  
-Give a look at [DT's dotfiles](https://gitlab.com/dwt1/dotfiles).
+To choose a wallpaper, edit `.config/awesome/theme.lua` setting the path for your image in the `theme.wallpaper` variable.  
+Alternatively, edit `.scripts/.fehbg` to choose the path, then tell Awesome to execute that script by uncommenting the related line (just search for "feh" in the file).
 
-# Installation
+## Installation
 
 > If you want to straight up copy all the dotfiles (**<u>never recommended</u>**).
 
@@ -88,3 +88,8 @@ Give a look at [DT's dotfiles](https://gitlab.com/dwt1/dotfiles).
     mv ~/.bashrc ~/.bashrc.bak
     ```
 -   Done!
+
+## Note
+
+All the configuration files which are in use and have DistroTube's logo in them are modified versions of the originals, but are not copies.  
+Give a look at [DT's dotfiles](https://gitlab.com/dwt1/dotfiles).
