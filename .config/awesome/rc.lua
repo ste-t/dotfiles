@@ -74,7 +74,9 @@ function toggle_bar_visible(fullscreen)
 end
 
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+-- beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+beautiful.init(os.getenv("HOME") .. "/.config/awesome/theme.lua")
+
 
 -- This is used later as the default terminal and editor to run.
 terminal = "kitty"
@@ -144,7 +146,7 @@ local function set_wallpaper(s)
     end
 
     -- Always set the weallpaper using the feh script if possible
-    awful.util.spawn(os.getenv("HOME") .. "/.scripts/.fehbg", false)
+    -- awful.util.spawn(os.getenv("HOME") .. "/.scripts/.fehbg", false)  -- Disabled to let awesomewm set the wallpaper (see ~/.config/awesome/theme.lua)
 end
 
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
