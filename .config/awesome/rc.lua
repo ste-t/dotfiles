@@ -461,6 +461,8 @@ awful.rules.rules = {
       properties = { tag = "8" } },
     { rule = { class = "Vivaldi-stable" },
       properties = { tag = "1" } },
+    { rule = { class = "VSCodium" },
+      properties = { tag = "3" } },
 }
 -- }}}
 

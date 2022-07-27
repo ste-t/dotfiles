@@ -61,7 +61,7 @@ Make sure you install [Fira Code Nerd Fonts](https://github.com/ryanoasis/nerd-f
 ## Wallpapers
 
 To choose a wallpaper, edit `.config/awesome/theme.lua` setting the path for your image in the `theme.wallpaper` variable.  
-Alternatively, edit `.scripts/.fehbg` to choose the path, then tell Awesome to execute that script by uncommenting the related line (just search for "feh" in the file).
+Alternatively, edit `.scripts/.fehbg` to choose the path, then tell Awesome to execute that script by uncommenting the related line (just search for "feh" in the `.config/awesome/rc.lua` file).
 
 ## Installation
 
