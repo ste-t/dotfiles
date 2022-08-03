@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 export PATH="$HOME/.poetry/bin:$HOME/bin:$HOME/.local/bin:$PATH"
-export EDITOR=vim
+export EDITOR=lvim
 
 source ~/.bash_aliases
 
