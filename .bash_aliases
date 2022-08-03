@@ -3,6 +3,7 @@ alias la="ls -A"
 alias ll="la -l"
 
 alias bat="bat --map-syntax '*.Rmd:Markdown' --map-syntax '*.rasi:CSS' --theme  OneHalfDark"
+alias vim="lvim"
 alias v="vim"
 
 alias stow="stow -v2"
