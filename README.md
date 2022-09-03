@@ -5,7 +5,7 @@
     <img alt="Screenshot with Dunst and Rofi" src="screenshots/2.png" width="48%" />
     &nbsp;
     <img alt="Custom Discord theme screenshot" src="screenshots/discord.png" width="48%"/>
-    <a href="https://www.stefano.ml"><img alt="My website on the Vivaldi browser" src="screenshots/vivaldi.png" width="48%"/></a>
+    <a href="https://stefano.pages.dev"><img alt="My website on the Vivaldi browser" src="screenshots/vivaldi.png" width="48%"/></a>
     &nbsp;
     <img alt="Vivaldi browser startpage" src="screenshots/vivaldi1.png" width="48%"/>
 </p>
@@ -24,7 +24,7 @@ Generic features:
 -   Palenight theme
     -   Custom Discord CSS
 -   [Vivaldi themes](vivaldi-themes)
-    -   In the first screenshot [my website](https://www.stefano.ml) is shown!
+    -   In the first screenshot [my website](https://stefano.pages.dev) is shown!
 -   Handy aliases
 
 ## Programs
