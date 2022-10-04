@@ -71,7 +71,7 @@ Alternatively, edit `.scripts/.fehbg` to choose the path, then tell Awesome to e
 -   Install [GNU Stow](https://www.gnu.org/software/stow/manual/stow.html) with your package manager (e.g.: `pacman -S stow`).
 -   Clone the repo into `~/.dotfiles`.
     ```sh
-    git clone https://github.com/IlmastroStefanuzzo/dotfiles ~/.dotfiles
+    git clone https://git.stefano.ml/dotfiles ~/.dotfiles
     ```
 -   Or update if you've already cloned it.
     ```sh
