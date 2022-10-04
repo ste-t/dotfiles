@@ -1,1 +1,4 @@
 .config/discocss/preload.js
+.config/lvim/ignore
+.config/lvim/plugin
+.config/gtk-3.0/bookmarks
