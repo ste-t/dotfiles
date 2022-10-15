@@ -276,6 +276,10 @@ globalkeys = gears.table.join(
   awful.key({ modkey }, "d", function() awful.util.spawn("rofi -modi drun,run -show drun", false) end,
     { description = "launch Rofi", group = "launcher" }),
 
+  -- Passmenu (ln -s /sbin/rofi /sbin/dmenu to use Rofi with passmenu)
+  awful.key({ modkey, "Shift" }, "d", function() awful.util.spawn("passmenu", false) end,
+    { description = "launch passmenu", group = "launcher" }),
+
   -- Take screenshot
   awful.key({}, "Print", function() awful.util.spawn("flameshot gui", false) end,
     { description = "take screenshot", group = "media keys" })
