@@ -559,5 +559,5 @@ beautiful.useless_gap = 5
 
 -- Autorun
 awful.util.spawn(os.getenv("HOME") .. "/.config/polybar/launch.sh", false)
-awful.util.spawn('setxkbmap -layout "it,us" -option "grp:alt_shift_toggle"', false)
+awful.util.spawn('setxkbmap -layout "it,us" -option "lv3:lalt_shift_toggle"', false)
 -- awful.util.spawn("picom", false)
