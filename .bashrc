@@ -5,6 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+set -o vi
 export PATH="$HOME/.poetry/bin:$HOME/bin:$HOME/.local/bin:$PATH"
 export EDITOR=lvim
 
