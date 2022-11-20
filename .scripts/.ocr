@@ -1,0 +1,21 @@
+#!/bin/sh
+
+CHAR_COUNT="$(
+  flameshot gui -s -r |       # Take screenshot 
+  tesseract - - -l ita+eng |  # Use Tesseract for OCR
+  xclip -silent -i -se c -f | # Copy output to clipboard and continue the pipe with -f
+  wc -m)"                     # Count characters
+
+notify () {
+  notify-send -i \
+    /usr/share/icons/Papirus-Dark/32x32/apps/accessories-notes.svg \
+    "Chicken OCR" \
+    "$1"
+}
+
+if [ "$CHAR_COUNT" -gt 0 ]; then
+  notify "Copied $CHAR_COUNT characters"
+else
+  notify "No characters detected"
+fi
+
