@@ -5,7 +5,7 @@
     <img alt="Screenshot with Dunst and Rofi" src="screenshots/2.png" width="48%" />
     &nbsp;
     <img alt="Custom Discord theme screenshot" src="screenshots/discord.png" width="48%"/>
-    <a href="https://stefano.ml"><img alt="My website on the Vivaldi browser" src="screenshots/vivaldi.png" width="48%"/></a>
+    <a href="https://tste.dev"><img alt="My website on the Vivaldi browser" src="screenshots/vivaldi.png" width="48%"/></a>
     &nbsp;
     <img alt="Vivaldi browser startpage" src="screenshots/vivaldi1.png" width="48%"/>
 </p>
@@ -24,7 +24,7 @@ Generic features:
 -   Palenight theme
     -   Custom Discord CSS
 -   [Vivaldi themes](vivaldi-themes)
-    -   In the first screenshot [my website](https://stefano.ml) is shown!
+    -   In the first screenshot [my website](https://tste.dev) is shown!
 -   Handy aliases
 
 ## Programs
@@ -71,7 +71,7 @@ Alternatively, edit `.scripts/.fehbg` to choose the path, then tell Awesome to e
 -   Install [GNU Stow](https://www.gnu.org/software/stow/manual/stow.html) with your package manager (e.g.: `pacman -S stow`).
 -   Clone the repo into `~/.dotfiles`.
     ```sh
-    git clone https://git.stefano.ml/dotfiles ~/.dotfiles
+    git clone https://git.tste.dev/dotfiles ~/.dotfiles
     ```
 -   Or update if you've already cloned it.
     ```sh
