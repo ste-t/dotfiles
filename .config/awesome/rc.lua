@@ -282,7 +282,13 @@ globalkeys = gears.table.join(
 
   -- Take screenshot
   awful.key({}, "Print", function() awful.util.spawn("flameshot gui", false) end,
-    { description = "take screenshot", group = "media keys" })
+    { description = "take screenshot", group = "media keys" }),
+
+  -- Screenshot OCR to clipboard
+  awful.key({ "Shift" }, "Print",
+    function() awful.util.spawn(os.getenv("HOME") .. "/.scripts/.ocr", false)
+    end,
+    { description = "take screenshot, run OCR and copy to clipboard", group = "media keys" })
 
 )
 

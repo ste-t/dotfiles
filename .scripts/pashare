@@ -1,0 +1,14 @@
+#!/bin/env sh
+
+case "$1" in
+  start)
+    $0 stop 
+    pactl load-module module-simple-protocol-tcp rate=48000 format=s16le channels=2 source="alsa_output.pci-0000_0c_00.4.analog-stereo.monitor" record=true port=9060
+    ;;
+  stop)
+    pactl unload-module "$(pactl list | grep tcp -B1 | grep M | sed 's/[^0-9]//g')"
+    ;;
+  *)
+      printf "Usage: %s start|stop" "$0" >&2
+    ;;
+esac

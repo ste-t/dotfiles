@@ -1,51 +1,120 @@
-// vim:ft=css
-/*
+/* vim:ft=css
+
 	This is a modified version of the original by DT
+
 */
 
 * {
     background-color:           #292d3e;
     border-color:               #292d3e;
+
+    vertical-align:             0.5;
     text-color:                 #bbc2cf;
-    height:                     20px;
     font:                       "Fira Code Semibold 9";
+
     prompt-font:                "Fira Code Bold 9";
     prompt-background:          #82aaff;
     prompt-foreground:          #292d3e;
     prompt-padding:             2px;
+
     selected-normal-background: #ff5572;
     selected-normal-foreground: #292d3e;
 }
-#window {
-    anchor: south;
-    location: south;
-    width: 48%;
-    padding: 0px;
-    children: [ horibox ];
+window {
+    height: 20px;
+    anchor:                     south;
+    location:                   south;
+    width:                      48%;
+    padding:                    0px;
+    children:                   [ horibox ];
 }
-#horibox {
+horibox {
+    orientation:                horizontal;
+    children:                   [ prompt, entry, listview ];
+}
+prompt {
+    padding:                    @prompt-padding;
+    background-color:           @prompt-background;
+    text-color:                 @prompt-foreground;
+    font:                       @prompt-font;
+}
+listview {
+    layout: horizontal;
+    lines: 100;
+}
+entry {
+    padding: 2px;
+    expand: false;
+    width: 10em;
+}
+element {
+    padding: calc((20px - 1em) / 2) 8px;
+}
+element selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+element-icon {
+	  size: 2ch;
+	  background-color: inherit;
+}
+
+element-text {
+    vertical-align: 1;
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+/*
+* {
+    background-color:           #292d3e;
+    border-color:               #292d3e;
+
+    vertical-align:             0.5;
+    text-color:                 #bbc2cf;
+    font:                       "Fira Code Semibold 9";
+
+    prompt-font:                "Fira Code Bold 9";
+    prompt-background:          #82aaff;
+    prompt-foreground:          #292d3e;
+    prompt-padding:             2px;
+
+    selected-normal-background: #ff5572;
+    selected-normal-foreground: #292d3e;
+}
+
+window {
+    anchor:     south;
+    location:   south;
+    width:      45%;
+    padding:    0px;
+    children:   [ horibox ];
+}
+horibox {
     orientation: horizontal;
-    children: [ prompt, entry, listview ];
+    children:   [ prompt, entry, listview ];
 }
-#prompt {
+prompt {
     padding:          @prompt-padding;
     background-color: @prompt-background;
     text-color:       @prompt-foreground;
     font:             @prompt-font;
 }
-#listview {
-    layout: horizontal;
-    lines: 100;
+listview {
+    layout:     horizontal;
+    spacing:    5px;
+    lines:      100;
 }
-#entry {
-    padding: 2px;
-    expand: false;
-    width: 10em;
+entry {
+    expand:     false;
+    width:      10em;
 }
-#element {
-    padding: 2px 8px;
+element {
+    padding: 100;
 }
-#element selected {
+
+element selected {
     background-color: @selected-normal-background;
     text-color:       @selected-normal-foreground;
 }
@@ -59,4 +128,4 @@ element-text {
     background-color: inherit;
     text-color:       inherit;
 }
-
+*/
