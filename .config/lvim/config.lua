@@ -60,7 +60,8 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
-lvim.builtin.notify.active = true
+-- Deprecated
+-- lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
@@ -75,7 +76,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "python",
   "typescript",
   "tsx",
-  "css",
+  -- "css",
   "rust",
   "java",
   "yaml",
@@ -83,6 +84,8 @@ lvim.builtin.treesitter.ensure_installed = {
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
+
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "tailwindcss" })
 
 -- generic LSP settings
 
@@ -163,11 +166,47 @@ formatters.setup {
 -- Additional Plugins
 lvim.plugins = {
   { "folke/tokyonight.nvim" },
+  { "max397574/better-escape.nvim" }
   -- { "drewtempelmeyer/palenight.vim" }
   -- {
   -- "folke/trouble.nvim",
   -- cmd = "TroubleToggle",
   -- },
+}
+
+require("better_escape").setup {
+    timeout = vim.o.timeoutlen,
+    default_mappings = true,
+    mappings = {
+        i = {
+            j = {
+                -- These can all also be functions
+                k = "<Esc>",
+                j = false,
+            },
+        },
+        c = {
+            j = {
+                k = "<Esc>",
+                j = "<Esc>",
+            },
+        },
+        t = {
+            j = {
+                k = "<C-\\><C-n>",
+            },
+        },
+        v = {
+            j = {
+                k = "<Esc>",
+            },
+        },
+        s = {
+            j = {
+                k = "<Esc>",
+            },
+        },
+    },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)

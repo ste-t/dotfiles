@@ -10,7 +10,11 @@ set -o vi
 export PATH="$HOME/.poetry/bin:$HOME/bin:$HOME/.local/bin:$PATH"
 export EDITOR=lvim
 
+export PATH="$HOME/development/flutter/bin:/opt/android-studio/bin:$PATH"  # Android dev
+export DART_TOOL_ENVIRONMENT=disable-analytics
+
 source ~/.bash_aliases
+source /usr/share/nvm/init-nvm.sh
 
 PS1='[\u@\h \W]\$ '
 
@@ -29,10 +33,10 @@ PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
 # Perl stuff
 
 
-nerdfetch
-eval "$(starship init bash)"
-
-
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+
+nerdfetch
+eval "$(starship init bash)"
